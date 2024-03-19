@@ -5,23 +5,20 @@ const port = 3000;
 
 
 function addNumbers(req, res) {
-  const num1 = parseFloat(req.query.num1); // Get number 1 from the query string
-  const num2 = parseFloat(req.query.num2); // Get number 2 from the query string
+  const number1 = parseFloat(req.query.number1); 
+  const number2 = parseFloat(req.query.number2); 
 
-  // Input validation to ensure both numbers are provided and valid
-  if (isNaN(num1) || isNaN(num2)) {
+  
+  if (isNaN(number1) || isNaN(number2)) {
     return res.status(400).send('Invalid input: Please provide two valid numbers.');
   }
 
-  const sum = num1 + num2;
+  const sum = number1 + number2;
 
-  res.json({ result: sum }); // Send the sum as JSON response
+  res.json({ result: sum }); 
 }
 
-// Create a GET route for adding numbers
-app.get('/add', addNumbers);
-
-// Start the server
+app.get('/provideTwoNumbersToAdd', addNumbers);
 app.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
+  console.log(`Express server started, listening at port ${port}`);
 });

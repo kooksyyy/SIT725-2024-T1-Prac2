@@ -6,10 +6,15 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "repository":{
+    "type": "git",
+    "url": "git+https://github.com/kooksyyy/SIT725-2024-T1-Prac2/tree/master"
+  },
   "keywords": [],
-  "author": "",
+  "author": "Krizza Isidro",
   "license": "ISC",
-  "description": "",
+  "description": "Prac 2",
+  
   "dependencies": {
     "express": "^4.18.3",
     "save": "^2.9.0"
