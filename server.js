@@ -15,7 +15,7 @@ function addNumbers(req, res) {
 
   const sum = number1 + number2;
 
-  res.json({ result: sum }); 
+  res.json({ "result": sum, "message": "success"}); 
 }
 
 app.get('/provideTwoNumbersToAdd', addNumbers);
